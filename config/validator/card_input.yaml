@@ -1,0 +1,12 @@
+App\Domain\DTO\CardInputDTO:
+  properties:
+    color:
+      - NotBlank: ~
+      - App\Application\Validator\Constraints\EnumChoice:
+          field: 'color'
+          choices: { callback: [App\Domain\Enum\CardColor, getColors] }
+    value:
+      - NotBlank: ~
+      - App\Application\Validator\Constraints\EnumChoice:
+          field: 'value'
+          choices: { callback: [App\Domain\Enum\CardValue, getValues] }

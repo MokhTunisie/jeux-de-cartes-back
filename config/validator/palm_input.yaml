@@ -1,0 +1,6 @@
+App\Domain\DTO\PalmInputDTO:
+  properties:
+    cards:
+      - NotBlank: ~
+      - Type: array
+      - Valid: ~

@@ -1,0 +1,11 @@
+framework:
+    validation:
+        mapping:
+            paths:
+                - '%kernel.project_dir%/config/validator/card_input.yaml'
+                - '%kernel.project_dir%/config/validator/palm_input.yaml'
+
+when@test:
+    framework:
+        validation:
+            not_compromised_password: false
